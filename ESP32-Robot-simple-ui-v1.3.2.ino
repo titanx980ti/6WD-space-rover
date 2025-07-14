@@ -1,3 +1,6 @@
+// ESP32 6WD Space Rover Control Code
+// GitHub Repository: https://github.com/titanx980ti/6WD-space-rover
+
 #include <WiFi.h>
 #include <WebServer.h>
 
@@ -153,6 +156,8 @@ void handleRoot() {
       color: white; cursor: pointer; background: #007BFF;
     }
     .button:active { background: #0056b3; }
+    a { color: #0af; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -161,7 +166,7 @@ void handleRoot() {
   <button class="button" ontouchstart="send('LEFT')" ontouchend="send('STOP')" onmousedown="send('LEFT')" onmouseup="send('STOP')">LEFT</button>
   <button class="button" ontouchstart="send('RIGHT')" ontouchend="send('STOP')" onmousedown="send('RIGHT')" onmouseup="send('STOP')">RIGHT</button><br>
   <button class="button" ontouchstart="send('BACKWARD')" ontouchend="send('STOP')" onmousedown="send('BACKWARD')" onmouseup="send('STOP')">BACKWARD</button>
-<p>Made by Harsha (titanx992ti) </p>
+  <p>Developed by Harsha (<a href="https://github.com/titanx980ti/6WD-space-rover" target="_blank">titanx980ti</a>)</p>
 <script>
 function send(action) {
   var xhr = new XMLHttpRequest();
